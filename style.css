@@ -1,0 +1,450 @@
+:root {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  color: #e4eceb;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; /* усі елементи наслідують властивість з кореневого елементу */
+}
+
+body {
+  background: #254441;
+  margin: 0;
+}
+a {
+  color: #e4eceb;
+  text-decoration: none;
+}
+a:hover {
+  color: #76cdb3;
+}
+
+.layout-container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* NAVIGATION */
+
+.layout-header {
+  background: #254441;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(233, 236, 243, 0.25);
+  box-shadow: 0px 4px 10px 0px #0000000d;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.layout-header > .layout-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.layout-nav > ul {
+  list-style: none;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.layout-nav > ul > li {
+  margin-left: 16px;
+}
+.layout-nav > ul > li:first-child {
+  margin-left: 0;
+}
+
+.layout-nav > ul > li > a {
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.3125;
+  border-radius: 8px;
+  padding: 6px 10px;
+  display: block;
+}
+.layout-nav > ul > li > a:hover,
+.layout-nav > ul > li:hover > a {
+  background: #1b2b2999;
+  color: #76cdb3;
+  cursor: pointer;
+}
+
+/* DROPDOWN MENU */
+.layout-nav > ul > .dropdown:hover > .dropdown-wrapper {
+  display: block;
+}
+.layout-nav > ul > .dropdown {
+  position: relative;
+}
+.dropdown-wrapper {
+  display: none;
+
+  padding-top: 12px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 120;
+}
+
+.dropdown-menu {
+  padding: 8px;
+  margin: 0;
+  list-style: none;
+  min-width: 221px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px 0px #0e101414;
+
+  box-shadow: 0px 0px 2px 0px #0e101414;
+
+  box-shadow: 0px 0px 0px 1px #0e10140a;
+}
+
+.dropdown-menu > li > a {
+  display: block;
+  color: #0e1014;
+  padding: 8px;
+  border-radius: 4px;
+}
+.dropdown-menu > li > a:hover {
+  color: #43aa8b;
+  background: rgba(204, 228, 221, 0.5);
+}
+
+/* COMMENTS */
+
+.article-image {
+  position: relative;
+}
+.article-comments {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: -30px;
+  right: -16px;
+  z-index: 30;
+  background-color: #e0c1c1;
+  border-radius: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.article-comments .icon {
+  margin-right: 5px;
+}
+
+.icon {
+  width: 20px;
+  height: 18px;
+}
+
+.article-comments .counter {
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3125;
+  color: #254441;
+}
+
+/* SECTIONS */
+
+.layout-content {
+  margin-top: 125px;
+}
+
+.section-header h1 {
+  font-size: 48px;
+  line-height: 1.15;
+  position: sticky;
+  top: 125px;
+  z-index: 50; /* для того, щоб елемент був поверх інших елементів */
+}
+
+#longreads h3,
+#longreads .article-info {
+  margin-top: 8px;
+}
+.article-info,
+#longreads .wide .article-info {
+  margin-top: 12px;
+}
+.article-date,
+.tag {
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.article-date {
+  font-weight: 700;
+  color: #76cdb3;
+}
+
+.article-link::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; /*  poзтягнений елемент має прилягяти до кожної межі батьківського елемента, при наведенні на ділянку пост буде світитись посилання*/
+}
+
+.article-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.333333;
+  margin: 12px 0;
+}
+
+.wide .article-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 12px 0;
+}
+
+.article-tag {
+  margin: -5px;
+  display: flex;
+}
+
+.article-tag > .tag {
+  margin: 5px;
+  padding: 4px 9px;
+  border-radius: 24px;
+  border: 1px solid rgba(204, 228, 221, 0.5);
+}
+
+.article-grid > article {
+  position: relative;
+}
+
+/*  SECTION PHOTO*/
+
+.article .article-info {
+  margin-top: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+}
+
+.article .article-title {
+  flex: 1 0 auto;
+}
+
+/* GRID */
+
+.section-grid {
+  margin: 60px 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 40px 20px;
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px 20px;
+}
+
+.article-grid > .wide {
+  grid-column-end: span 2;
+}
+
+.article {
+  grid-column-end: span 2;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+/* TABLET */
+@media screen and (max-width: 999px) {
+  .layout-content {
+    margin-top: 110px;
+  }
+
+  .layout-container {
+    max-width: 638px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .layout-nav > ul > li {
+    margin-left: 19px;
+  }
+  .article-comments .icon {
+    margin-right: 7px;
+  }
+  .article-comments .counter {
+    font-family: 'Arial', sans-serif;
+  }
+  #recent .wide {
+    margin-top: 31px; /* щоб не перекривати іконку з коментарями */
+  }
+  .section-header {
+    position: sticky;
+    top: 73px;
+    z-index: 50;
+    background: #254441;
+    margin: -29px -50px -32px -50px;
+    padding: 29px 50px 32px 50px;
+  }
+
+  .section-grid {
+    grid-template-columns: 1fr;
+    grid-gap: 32px;
+  }
+
+  .article-grid {
+    grid-gap: 40px 12px;
+  }
+  #longreads .article-grid {
+    grid-gap: 40px 19px;
+  }
+  .article {
+    grid-gap: 12px;
+  }
+}
+
+/* MOBILE */
+@media screen and (max-width: 767px) {
+  .layout-content {
+    margin-top: 15px;
+  }
+
+  .layout-container {
+    max-width: 306px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-grid,
+  .article-grid,
+  .article {
+    display: block;
+  }
+  /*  Nav */
+
+  .layout-header {
+    padding: 10px 0;
+    position: inherit;
+  }
+  .logo {
+    padding: 12px;
+  }
+
+  .layout-header > .layout-container {
+    justify-content: center;
+  }
+
+  /* Navbar in the bottom*/
+  .layout-nav {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 15px 0;
+    z-index: 50;
+    background: #254441;
+    border-top: 1px solid #e9ecf340;
+  }
+  .layout-nav > ul {
+    justify-content: center;
+  }
+  .layout-nav > ul > li {
+    margin-left: 12px;
+  }
+  .layout-nav > ul > li > a {
+    font-size: 14px;
+    line-height: 1.285714;
+  }
+
+  .layout-nav > ul > li > a:hover,
+  .layout-nav > ul > li:hover > a {
+    background: #e9ecf31a;
+  }
+  .dropdown-wrapper {
+    display: none;
+    padding-top: 0;
+    position: absolute;
+    top: -438px; /* 416px - висота блоку і 22px - відступ від buttom "матеріали" */
+    left: 0;
+    z-index: 120;
+  }
+  /*  Sections */
+  #recent {
+    margin-top: 0;
+  }
+
+  .section-header {
+    font-size: 32px;
+    line-height: 1.15;
+    position: sticky;
+    top: -4px;
+    margin-top: -15px;
+    padding-top: 15px;
+    z-index: 30;
+  }
+  h1 {
+    text-align: center;
+  }
+
+  .article-comments {
+    display: none;
+  }
+  .wide .article-info .article-title {
+    font-size: 18px;
+    line-height: 1.333333;
+  }
+
+  .article-info,
+  .article .article-info {
+    margin-top: 12px;
+    margin-bottom: 40px;
+  }
+  .smaller-margin .article-info {
+    margin-bottom: 20px;
+  }
+  #longreads h3,
+  #longreads .article-info {
+    margin-top: 12px;
+  }
+
+  .article-image img {
+    height: 200px;
+    width: 306px;
+  }
+
+  .wide,
+  #photos .article:first-child {
+    margin-top: 32px;
+  }
+}

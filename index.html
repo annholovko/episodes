@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<!-- Головко Анна — Практика №4 — Сітки, флексбокси та позиціювання»-->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no, minimal-ui"
+    />
+    <title>Episodes</title>
+    <link
+      rel="stylesheet"
+      href="style.css "
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap');
+    </style>
+  </head>
+  <body>
+    <header class="layout-header">
+      <div class="layout-container">
+        <a href="https://cases.media" class="logo">
+          <img
+            src="Logo.png"
+          />
+        </a>
+        <nav class="layout-nav">
+          <ul>
+            <li class="dropdown">
+              <a href="#materials">Матеріали</a>
+              <div class="dropdown-wrapper">
+                <ul class="dropdown-menu">
+                  <li><a href="#recent">Останнє</a></li>
+                  <li><a href="#">Відео</a></li>
+                  <li><a href="#longreads">Лонгріди</a></li>
+                  <li><a href="#photos">Фото</a></li>
+                  <li><a href="#">Тренди</a></li>
+                  <li><a href="#">Путівники</a></li>
+                  <li><a href="#">Рейтинги</a></li>
+                  <li><a href="#">Обладнання</a></li>
+                  <li><a href="#">Світова кухня</a></li>
+                  <li><a href="#">Поради</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#resources">Ресурси</a></li>
+            <li><a href="#aboutus">Про нас</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="layout-content">
+      <div class="layout-container">
+        <section id="recent" class="section-grid">
+          <header class="section-header">
+            <h1>Останнє</h1>
+          </header>
+          <div class="article-grid">
+            <article class="wide">
+              <div class="article-image">
+                <img src="recent-1.png" />
+                <div class="article-comments">
+                  <img class="icon" src="Icon.png" />
+                  <span class="counter">30</span>
+                </div>
+              </div>
+              <div class="article-info">
+                <div class="article-date">9 вересня о 14:00</div>
+                <h2 class="article-title">
+                  <a href="#" class="article-link">
+                    Подорожі в епоху надмірного туризму: 10 способів, як
+                    мандрівники можуть допомогти
+                  </a>
+                </h2>
+                <div class="article-tag">
+                  <span class="tag">Поради</span>
+                  <span class="tag">Лонгріди</span>
+                  <span class="tag">Тренди</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="smaller-margin">
+              <div class="article-image">
+                <img src="recent-2.png" />
+              </div>
+              <div class="article-info">
+                <div class="article-date">9 вересня о 12:56</div>
+                <h3 class="article-title">
+                  <a href="#" class="article-link">
+                    Трекінг: як підготуватися до наступного походу
+                  </a>
+                </h3>
+                <div class="article-tag">
+                  <span class="tag">Поради</span>
+                  <span class="tag">Обладнання</span>
+                </div>
+              </div>
+            </article>
+
+            <article>
+              <div class="article-image">
+                <img src="recent-3.png" />
+              </div>
+              <div class="article-info">
+                <div class="article-date">9 вересня о 12:56</div>
+                <h3 class="article-title">
+                  <a href="#" class="article-link">
+                    7 звичок високоефективних мандрівників
+                  </a>
+                </h3>
+                <div class="article-tag">
+                  <span class="tag">Поради</span>
+                  <span class="tag">Тренди</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="smaller-margin">
+              <div class="article-image">
+                <img src="recent-4.png" />
+              </div>
+              <div class="article-info">
+                <div class="article-date">5 вересня о 12:56</div>
+                <h3 class="article-title">
+                  <a href="#" class="article-link">
+                    Чому вулична їжа — це найкращий путівник
+                  </a>
+                </h3>
+                <div class="article-tag">
+                  <span class="tag">Поради</span>
+                  <span class="tag">Світова кухня</span>
+                </div>
+              </div>
+            </article>
+
+            <article>
+              <div class="article-image">
+                <img src="recent-5.png" />
+              </div>
+              <div class="article-info">
+                <div class="article-date">1 вересня о 09:26</div>
+                <h3 class="article-title">
+                  <a href="#" class="article-link">
+                    Найкраща ручна поклажа з відділенням для ноутбука
+                  </a>
+                </h3>
+                <div class="article-tag">
+                  <span class="tag">Поради</span>
+                  <span class="tag">Обладнання</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="longreads" class="section-grid">
+          <header class="section-header">
+            <h1>Лонгріди</h1>
+          </header>
+          <div class="article-grid">
+            <article class="wide">
+              <div class="smaller-margin">
+                <div class="article-image">
+                  <img src="longread-1.png" />
+                </div>
+                <div class="article-info">
+                  <div class="article-date">9 вересня о 14:00</div>
+                  <h2 class="article-title">
+                    <a href="#" class="article-link">Дорога життя</a>
+                  </h2>
+                  <div class="article-tag">
+                    <span class="tag">Лонгріди</span>
+                    <span class="tag">Фото</span>
+                    <span class="tag">Путівники</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="smaller-margin">
+              <div class="article-image">
+                <img src="longread-2.png" />
+              </div>
+              <div class="article-info">
+                <div class="article-date">1 вересня о 10:56</div>
+                <h3 class="article-title">
+                  <a href="#" class="article-link">Велика п’ятірка</a>
+                </h3>
+                <div class="article-tag">
+                  <span class="tag">Лонгріди</span>
+                  <span class="tag">Фото</span>
+                  <span class="tag">Рейтинги</span>
+                </div>
+              </div>
+            </article>
+
+            <article>
+              <div class="article-image">
+                <img src="longread-3.png" />
+              </div>
+              <div class="article-info">
+                <div class="article-date">24 серпня о 13:15</div>
+                <h3 class="article-title">
+                  <a href="#" class="article-link">Загублені у Токіо</a>
+                </h3>
+                <div class="article-tag">
+                  <span class="tag">Лонгріди</span>
+                  <span class="tag">Фото</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="photos" class="section-grid">
+          <header class="section-header">
+            <h1>Фото</h1>
+          </header>
+          <div class="article-grid">
+            <article class="article">
+              <div class="article-image">
+                <img src="photo-1.png" />
+              </div>
+              <div class="article-info">
+                <div class="article-date">13 вересня о 12:56</div>
+                <h3 class="article-title">
+                  <a href="#" class="article-link">
+                    Кращі фото 2022 за оцінкою спільноти підписників
+                  </a>
+                </h3>
+                <div class="article-tag">
+                  <span class="tag">Фото</span>
+                  <span class="tag">Рейтинги</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="article">
+              <div class="article-image">
+                <img src="photo-2.png" />
+              </div>
+              <div class="article-info">
+                <div class="article-date">3 вересня о 14:00</div>
+                <h3 class="article-title">
+                  <a href="#" class="article-link">
+                    30 мальовничих причин відвідати Норвегію
+                  </a>
+                </h3>
+                <div class="article-tag">
+                  <span class="tag">Фото</span>
+                  <span class="tag">Путівники</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="article">
+              <div class="article-image">
+                <img src="photo-3.png" />
+              </div>
+              <div class="article-info">
+                <div class="article-date">12 вересня о 9:11</div>
+                <h3 class="article-title">
+                  <a href="#" class="article-link">
+                    Дивовижна Нова Зеландія у 20 фото
+                  </a>
+                </h3>
+                <div class="article-tag">
+                  <span class="tag">Фото</span>
+                  <span class="tag">Путівники</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
